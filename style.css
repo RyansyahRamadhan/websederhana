@@ -1,0 +1,531 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f2f5;
+}
+h1 {
+    text-align: center; /* Center the text */
+    color: #333; /* Dark text color */
+    margin: 40px 0; /* Space above and below the heading */
+    font-size: 28px; /* Font size */
+    font-weight: bold; /* Bold text */
+    background-color: #f8f9fa; /* Light background color */
+    padding: 15px; /* Padding around the text */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+/* General header styling */
+header {
+    width: 100%;
+    background-color: white; /* Dark background color */
+    color: white; /* White text color */
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+}
+
+/* Logo styling */
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+/* Navigation styling */
+header nav {
+    display: flex;
+    gap: 20px; /* Space between navigation items */
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #FFD700; /* Change to a gold color on hover */
+}
+
+/* Centering the header title */
+header h1 {
+    position: left ;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: white;
+    margin: 0;
+    padding: 5px 15px;
+}
+
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    background: #7386D5;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #6d7fcc;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #47748b;
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+
+#sidebar ul li a:hover {
+    color: #7386D5;
+    background: #fff;
+}
+
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+    color: #fff;
+    background: #6d7fcc;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #6d7fcc;
+}
+
+ul.CTAs {
+    padding: 20px;
+}
+
+ul.CTAs a {
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+a.download {
+    background: #fff;
+    color: #7386D5;
+}
+
+a.article,
+a.article:hover {
+    background: #6d7fcc !important;
+    color: #fff !important;
+}
+
+/*main side bar*/
+.msb {
+  width: 200px;
+  background-color: #F5F7F9;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: auto;
+  min-height: 100%;
+  overflow-y: auto;
+  white-space: nowrap;
+  height: 100%;
+  z-index: 1;
+  border-right: 1px solid #ddd;
+  .navbar {
+    border: none;
+    margin-left: 0;
+    background-color: inherit;
+  }
+  .navbar-header {
+    width: 100%;
+    border-bottom: 1px solid #e7e7e7;
+    margin-bottom: 20px;
+    background: #fff;
+  }
+  .navbar-nav {
+    .panel {
+      border: 0 none;
+      box-shadow: none;
+      margin: 0;
+      background: inherit;
+    }
+    li {
+      display: block;
+      width: 100%;
+      a {
+        padding: 15px;
+        color: #5f5f5f;
+        .glyphicon, .fa {
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+  .nb {
+    padding-top: 5px;
+    padding-left: 10px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    
+  }
+}
+ul.nv,
+ul.ns {
+  position: relative;
+  padding: 0;
+  list-style: none;  
+}
+.nv {  
+  li {
+    display: block;
+    position: relative;
+    
+    &::before {
+      clear: both;
+      content: "";      
+      display: table;
+    }
+    a {
+      color: #444;
+      padding: 10px 25px;
+      display: block;
+      vertical-align: middle;
+      
+      .ic {
+        font-size: 16px;
+        margin-right: 5px;
+        font-weight: 300;
+        display: inline-block;
+      }
+    }
+  }
+  /*ns: nav-sub*/
+  .ns {
+    li {
+      a {
+        padding: 10px 50px;
+      }
+    }
+    
+  }
+  
+}
+.container {
+    width: 100%;
+    max-width: 400px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+}
+h1 {
+    color: #333;
+    margin: 0;
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 0 15px;
+    font-size: 26px;
+}
+h2 {
+    color: #333;
+     margin: 0;
+    position: absolute;
+    top:  0 px; /* Posisikan di atas kontainer */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white; /* Untuk menambahkan latar belakang putih di belakang teks */
+    padding: 0 10px; /* Tambahkan padding samping agar terlihat rapi */
+    font-size: 24px;
+}
+
+label {
+    display: block;
+    margin: 15px 0 5px;
+    text-align: left;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.message {
+    margin-top: 20px;
+    color: red;
+}
+/* Sidebar Styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #0000FF;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: LEFT;
+    padding-top: 20px;
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+
+.sidebar-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar-header .logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+    border-radius: 50%; /* Membuat gambar logo berbentuk lingkaran */
+}
+
+.sidebar-header h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #ecf0f1;
+}
+
+.sidebar-header p {
+    margin-bottom: 3px;
+    font-size: 14px;
+}
+
+.sidebar-header span {
+    font-size: 12px;
+    color: #bdc3c7;
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+.sidebar nav ul li {
+    width: 100%;
+}
+
+.sidebar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 12px 20px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.sidebar nav ul li a:hover,
+.sidebar nav ul li a.active {
+    background-color: #2980b9;
+}
+
+.content {
+    margin-left: 250px; /* Menyisakan ruang untuk sidebar */
+    padding: 20px;
+    width: calc(100% - 250px);
+}
+
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: #34495e;
+    font-size: 24px;
+}
+
+header p {
+    color: #7f8c8d;
+}
+
+.dashboard-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1;
+    min-width: 150px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card h3 {
+    color: #2980b9;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 24px;
+    color: #34495e;
+}
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
+}
+
+.navbar {
+    padding: 15px 10px;
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+
+#content {
+    width: 100%;
+    padding: 20px;
+    min-height: 100vh;
+    transition: all 0.3s;
+}
+/* Styling Tabel Karyawan */
+.employee-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.employee-table th, .employee-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.employee-table th {
+    background-color: #2980b9;
+    color: white;
+    font-weight: bold;
+}
+
+.employee-table tr:hover {
+    background-color: #f2f2f2;
+}
+
+.employee-table td {
+    color: #34495e;
+}
